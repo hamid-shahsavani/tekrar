@@ -15,7 +15,7 @@
 
 ---
 ## *what is <ins>tekrar</ins>*
-*create loading in python project ...<br />*
+*create loading animation in python cli project ...<br />*
 
 ---
 ## *description*
