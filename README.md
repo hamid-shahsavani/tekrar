@@ -18,6 +18,29 @@
 *create loading animation in python cli project ...<br />*
 
 ---
+## *installation*
+
++ #### *install by pip*
+
+      # linux
+      
+      sudo python3 -m pip install tekrar
+      
+      # windows
+      
+      py -m pip install tekrar
+      
++ #### *install by setup.py*
+
+      # linux
+      
+      sudo python3 -m pip install https://github.com/sys113/tekrar/archive/0.1.0.zip
+      
+      # windows
+      
+      py -m pip install https://github.com/sys113/tekrar/archive/0.1.0.zip
+
+---
 ## *description*
   + #### *speed*
     ```python
