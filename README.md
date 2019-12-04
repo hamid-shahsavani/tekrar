@@ -95,3 +95,33 @@
    # type 'args' only list ...
    
    args = ['tekrar','SYS113']
+   
+---
+## *copyright*
+*copyright <ins>SYS113</ins> - <ins>2019</ins>.*
+
+---
+## *license* 
+*<ins>MIT</ins> license , please see <ins>LICENSE</ins> file.*
+
+---
+## *donate* 
++ *for <ins>iranian</ins> users &nbsp; :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>  id pay </ins> &nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; https://idpay.ir/sys113*
++ *for <ins>global</ins> users &nbsp; : &nbsp;<ins>BTC wallet id</ins>&nbsp; - &nbsp; 149JgUmFqG6MvFg79Ldrvdk2bN35ByhMuw*
+---
+## *contact me* 
+* *[email](https://051.SYS113@gmail.com)*
+* *[telegram](https://t.me/SYS113/)*
+* *[instagram](https://instagram.com/sys113/)*
+---
+## *last world*
+*hope this is <ins>negar</ins> useful to you and enjoy it.*
+
+---
+<div align="center">
+
+*negar logo ❤️ mohamad moradiyani*
+</div>
+
+---
+
