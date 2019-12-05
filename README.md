@@ -75,7 +75,9 @@
 
   + #### *sleep*
     ```python
+    
       # Show loading for 8 second ...
+      
       # can be of type int or float ...
       # cannot use simultaneously 'sleep' and 'function' argument ...
       
@@ -85,18 +87,31 @@
   + #### *function*
     ```python
       # Show loading if 'x' function running ...
+      
       # cannot use simultaneously 'sleep' and 'function' argument ...
       
       function = x
     ```
     
-   + #### *args*
+   + #### *argument*
    ```python
-   # if function has arguments then use this way ...
+   # if 'function' has arguments then use this way ...
+   # use this method if 'function' has 'argument' ...
+   
+   # cannot use simultaneously 'sleep' and 'function' argument ...
    # type 'args' only list ...
    
-   args = ['tekrar','SYS113']
+   argument = ['tekrar','SYS113']
    ```
+   
+   + #### output
+   ```python
+   # if 'function' has arguments then use this way for hide function output ...
+   
+   # default is False
+   # argument 'output' must be boolean type ...
+   
+   
 ---
 ## *copyright*
 *copyright <ins>SYS113</ins> - <ins>2019</ins>.*
