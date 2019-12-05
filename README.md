@@ -110,6 +110,7 @@
    
    # default is False
    # argument 'output' must be boolean type ...
+   ```
    
    
 ---
