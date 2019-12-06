@@ -95,25 +95,25 @@
     ```
     
    + #### *argument*
-   ```python
-   # if 'function' has arguments then use this way ...
-   # use this method if 'function' has 'argument' ...
-   
-   # cannot use simultaneously 'sleep' and 'function' argument ...
-   # type 'args' only list ...
-   
-   argument = ['tekrar','SYS113']
-   ```
+     ```python
+     # if 'function' has arguments then use this way ...
+     # use this method if 'function' has 'argument' ...
+
+     # cannot use simultaneously 'sleep' and 'function' argument ...
+     # type 'args' only list ...
+
+     argument = ['tekrar','SYS113']
+     ```
    
    + #### output
-   ```python
-   # if 'function' has arguments then use this way for hide function output ...
-   
-   # default is False
-   # argument 'output' must be boolean type ...
-   
-   output = True
-   ```
+     ```python
+     # if 'function' has arguments then use this way for hide function output ...
+
+     # default is False
+     # argument 'output' must be boolean type ...
+
+     output = True
+     ```
    
    
 ---
