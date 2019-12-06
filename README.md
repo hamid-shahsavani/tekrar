@@ -130,17 +130,17 @@
 + *for <ins>global</ins> users &nbsp; : &nbsp;<ins>BTC wallet id</ins>&nbsp; - &nbsp; 149JgUmFqG6MvFg79Ldrvdk2bN35ByhMuw*
 ---
 ## *contact me* 
-* *[email](https://051.SYS113@gmail.com)*
+* *[email](mailto:051.SYS113@gmail.com)*
 * *[telegram](https://t.me/SYS113/)*
 * *[instagram](https://instagram.com/sys113/)*
 ---
 ## *last world*
-*hope this is <ins>negar</ins> useful to you and enjoy it.*
+*hope this is <ins>tekrar</ins> useful to you and enjoy it.*
 
 ---
 <div align="center">
 
-*negar logo ❤️ mohamad moradiyani*
+*tekrar logo ❤️ mohamad moradiyani*
 </div>
 
 ---
