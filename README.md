@@ -64,15 +64,13 @@
       - #### *method 1*
       
       <div align="center">
-  
-      ![Alt Text](https://raw.githubusercontent.com/sys113/tekrar/master/example/review%20loading%20animation%20-%20method%20one.gif)
+      <img src="https://raw.githubusercontent.com/sys113/tekrar/master/example/review%20loading%20animation%20-%20method%20one.gif" width="300" height="40" />
       </div>
       
       - #### *method 2*
       
       <div align="center">
-  
-      ![Alt Text](https://raw.githubusercontent.com/sys113/tekrar/master/example/review%20loading%20animation%20-%20method%20two.gif)
+      <img src="https://raw.githubusercontent.com/sys113/tekrar/master/example/review%20loading%20animation%20-%20method%20two.gif" width="300" height="40" />
       </div>
 
   + #### *sleep*
