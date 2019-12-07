@@ -42,8 +42,8 @@
 
 ---
 ## *example*
-  + [1 : curl download file](https://raw.githubusercontent.com/sys113/tekrar/master/example/1_curl_download_file.gif)
-  ```# arguments used : function, argument, speed, output```
+  + [1 : curl download file](https://raw.githubusercontent.com/sys113/tekrar/master/example/1_curl_download_file.gif)<br />
+  ```     arguments used : function, argument, speed, output```
   
 ---
 ## *description*
