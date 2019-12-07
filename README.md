@@ -18,6 +18,10 @@
 *create loading animation in python cli project ...<br />*
 
 ---
+## *example*
+  + exmaple 1 : checking network status , argument use : 
+
+---
 ## *installation*
 
 + #### *install by pip*
