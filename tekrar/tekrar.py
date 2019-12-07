@@ -195,7 +195,7 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 				
 					# delete line and close animate function ...
 
-					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)) ; return
+					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 
 				# delete line ...
 
@@ -223,7 +223,7 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 				
 					# delete line and close animate function ...
 
-					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)) ; return
+					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 				
 				# add star to 3 stars from left varable
 
@@ -255,7 +255,7 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 				
 					# delete line and close animate function ...
 
-					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)) ; return
+					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 				
 				# delete line ...
 
@@ -283,7 +283,7 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 				
 					# delete line and close animate function ...
 
-					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)) ; return
+					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 				
 				# add star to 3 stars from left varable
 
@@ -315,7 +315,7 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 				
 					# delete line and close animate function ...
 
-					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)) ; return
+					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 				
 				# delete line ...
 
@@ -343,7 +343,7 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 				
 					# delete line and close animate function ...
 
-					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)) ; return
+					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 				
 				# add star to 3 stars from left varable ...
 
@@ -446,7 +446,7 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 				
 					# delete line and close animate function ...
 
-					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)) ; return
+					stdout.write('\r\033[D \033[D'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 
 				# stars variable ...
 
@@ -461,7 +461,7 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 
 				# delete line ...
 
-				stdout.flush() ; stdout.write('\b \b'*int(resize)) ; zzz(speed); stdout.write(' '*int(resize)+'\r')
+				stdout.flush() ; stdout.write('\033[D \033[D'*int(resize)) ; zzz(speed); stdout.write(' '*int(resize)+'\r')
 
 				# show stars random color ...
 
@@ -485,7 +485,7 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 				
 					# delete line and close animate function ...
 
-					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)) ; return
+					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 
 				# stars variable ...
 
