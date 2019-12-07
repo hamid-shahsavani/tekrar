@@ -43,6 +43,7 @@
 ---
 ## *example*
   + [1 : curl download file](https://raw.githubusercontent.com/sys113/tekrar/master/example/1_curl_download_file.gif)
+  ```# arguments used : function, argument, speed, output```
   
 ---
 ## *description*
@@ -118,6 +119,12 @@
 
      output = True
      ```
+   + #### save function return value
+    ```python
+    # call tekrar.loading function in a variable ...
+    
+    save_return_value = tekrar.loading(function = func, argument = ['hi'], output = True, speed = 5, method = 2)
+   
 ---
 ## *copyright*
 *copyright <ins>SYS113</ins> - <ins>2019</ins>.*
