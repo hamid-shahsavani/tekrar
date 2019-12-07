@@ -120,10 +120,6 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 
 	# -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-	# hide command line cursor ...
-
-	hide()
-
 	# fix show text color ...
 
 	system('')
@@ -172,7 +168,11 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 	# animate method 1 function ...
 
 	def animate_method_1(speed):
+		
+		# hide command line cursor ...
 
+		hide()
+		
 		# infinite repetition until forced exit ...
 
 		while True:
@@ -423,7 +423,11 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 	# animate method 2 function ...
 
 	def animate_method_2(speed):
+		
+		# hide command line cursor ...
 
+		hide()
+		
 		# infinite repetition until forced exit ...
 
 		while True:
