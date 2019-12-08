@@ -1,5 +1,4 @@
 # import libs ...
-
 import sys
 from os import system
 from platform import system as ostype
@@ -13,16 +12,13 @@ from random import choice
 from queue import Queue
 
 # loading function ...
-
 def loading(sleep = None , function = None , speed = None , method = None , argument = None , output = None):
 
 	# show error function ...
-
 	def error(problem):
 		print('tekrar module - error | python file : '+python_file_name+' | line : '+line_python_file+' | problem : '+problem)
 
-	# coloRED stars animate functions ...
-
+	# colored stars animate functions ...
 	class star:
 		BLUE = '\033[94m'+'*'
 		GREEN = '\033[92m'+'*'
@@ -30,34 +26,33 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 		YELLOW = '\033[33m'+'*'
 
 	# find (filename or line) python file ...
-
 	x = stack()[1]
 	x = x[0]
 	get_python_file_name_or_line = getframeinfo(x)
 
 	# set valur for find line in python file ...
-
 	line_python_file = str(get_python_file_name_or_line.lineno)
 
 	# set value for find python file name ...
-
 	python_file_name = str(get_python_file_name_or_line.filename)
 
 	# --------------------------------------------------------------------------- if statements -------------------------------------------------------------------
 
 	# if type 'argument' is not list show error ...
-
 	if (argument is not None) and (type(argument) is not list):
 		error('argument \'argument\' must be a list type ...')
 		return
 
 	# prerequisites for using argument ...
-
 	if ((sleep is None) and (function is None)) and (speed is not None):
 		error('need \'sleep\' or \'function\' argument to use the \'speed\' argument ...')
 		return
 	elif ((sleep is None) and (function is None)) and (method is not None):
 		error('need \'sleep\' or \'function\' argument to use the \'method\' argument ...')
+		return
+	elif ((sleep is None) and (function is None)):
+	# if type sleep is not int or float show error ...
+		error('argument \'argument\' must be a list type ...')
 		return
 	elif (function is None) and (argument is not None):
 		error('need \'function\' argument to use the \'method\' argument ...')
@@ -67,13 +62,11 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 		return
 
 	# if use 'sleep' argument , cannot use 'argument' and 'output' and 'output' arguments ...
-
 	if (sleep is not None) and (function is not None):
 		error('if use \'sleep\' argument , cannot use \'function\' argument and vice versa ...')
 		return
 
 	# set speed for animates function , default is 5 ...
-
 	if speed is None:
 		speed = 0.040
 	elif type(speed) is not int:
@@ -104,7 +97,6 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 		return
 
 	# set method for animates function , default 1 ...
-
 	if method is None:
 		method = 1
 	elif type(method) is not int:
@@ -121,15 +113,12 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 	# -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	# fix show text color ...
-
 	system('')
 
 	# if finished is True break animate function ...
-
 	finished = False
 
 	# check command prompet columns size
-
 	if ostype().upper() == 'WINDOWS':
 		resize = str(check_output("mode con:", shell=True))
 		resize = resize.split('\\r\\n    K', 1)[0]
@@ -150,15 +139,12 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 		resize = resize.replace(';','')
 	
 	#  command prompet size method 1 ...
-
 	command_line_size_method_1 = int(resize)
 
 	# command prompet half size method 2 ...
-
 	half_command_line_size_method_1 = (command_line_size_method_1 - 3)//2
 
 	# command prompet size method 2 ...
-
 	command_line_size_method_2 = int(resize)-4
 
 	# b is blue , g is green , r is red , y is yellow in animate method 1 comment ...
@@ -166,404 +152,306 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 	# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	# animate method 1 function ...
-
 	def animate_method_1(speed):
 		
 		# hide command line cursor ...
-
 		hide()
 		
 		# infinite repetition until forced exit ...
-
 		while True:
 
 			# show loading ...
-
 			for space in range(half_command_line_size_method_1):
 
 				# end color ...
-
 				stdout.write('\033[0m')
 
 				# exit from animate function method 2 , if runtime ended ...
-
 				if (not thread.isAlive()) or (finished):
 
 					# show command line cursor ...
-
 					show()
 				
 					# delete line and close animate function ...
-
 					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 
 				# delete line ...
-
 				stdout.flush() ; stdout.write('\b \b'*int(resize)) ; zzz(speed) ; stdout.write(' '*command_line_size_method_1+'\r')
 
 				# show loading , |      bgy r     |
-
 				stdout.write(' '*half_command_line_size_method_1+star.BLUE+star.GREEN+star.YELLOW+' '*space+star.RED)
 
 			# show loading ...
-
 			for space in range(half_command_line_size_method_1):
 
 				# end color ...
-
 				stdout.write('\033[0m')
 
 				# exit from animate function method 2 , if runtime ended ...
-
 				if (not thread.isAlive()) or (finished):
 
 					# show command line cursor ...
-
 					show()
 				
 					# delete line and close animate function ...
-
 					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 				
 				# add star to 3 stars from left varable
-
 				reverse = (half_command_line_size_method_1-1)-space
 
 				# delete line ...
-
 				stdout.flush() ; stdout.write('\b \b'*int(resize)) ; zzz(speed) ; stdout.write(' '*command_line_size_method_1+'\r')
 
 				# show loading , |     r bgy     |
-
 				stdout.write(' '*space+star.RED+' '*reverse+star.BLUE+star.GREEN+star.YELLOW)
 
 			# show loading ...
-
 			for space in range(half_command_line_size_method_1):
 
 				# end color ...
-
 				stdout.write('\033[0m')
 
 				# exit from animate function method 2 , if runtime ended ...
-
 				if (not thread.isAlive()) or (finished):
 
 					# show command line cursor ...
-
 					show()
 				
 					# delete line and close animate function ...
-
 					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 				
 				# delete line ...
-
 				stdout.flush() ; stdout.write('\b \b'*int(resize)) ; zzz(speed) ; stdout.write(' '*command_line_size_method_1+'\r')
 
 				# show loading , |     rbg y     |
-
 				stdout.write(' '*half_command_line_size_method_1+star.RED+star.BLUE+star.GREEN+' '*space+star.YELLOW)
 
 			# show loading ...
-
 			for space in range(half_command_line_size_method_1):
 
 				# end color ...
-
 				stdout.write('\033[0m')
 
 				# exit from animate function method 2 , if runtime ended ...
-
 				if (not thread.isAlive()) or (finished):
 
 					# show command line cursor ...
-
 					show()
 				
 					# delete line and close animate function ...
-
 					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 				
 				# add star to 3 stars from left varable
-
 				reverse = (half_command_line_size_method_1-1)-space
 
 				# delete line ...
-
 				stdout.flush() ; stdout.write('\b \b'*int(resize)) ; zzz(speed) ; stdout.write(' '*command_line_size_method_1+'\r')
 
 				# show loading , |     y rgbg     |
-
 				stdout.write(' '*space+star.YELLOW+' '*reverse+star.RED+star.BLUE+star.GREEN)
 
 			# show loading ...
-
 			for space in range(half_command_line_size_method_1):
 
 				# end color ...
-
 				stdout.write('\033[0m')
 
 				# exit from animate function method 2 , if runtime ended ...
-
 				if (not thread.isAlive()) or (finished):
 
 					# show command line cursor ...
-
 					show()
 				
 					# delete line and close animate function ...
-
 					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 				
 				# delete line ...
-
 				stdout.flush() ; stdout.write('\x1b[2K\x1b[G') ; zzz(speed) ; stdout.write(' '*command_line_size_method_1+'\r')
-
+				
 				# show loading , |     yrb g     |
-
 				stdout.write(' '*half_command_line_size_method_1+star.YELLOW+star.RED+star.BLUE+' '*space+star.GREEN)
 
 			# show loading ...
-
 			for space in range(half_command_line_size_method_1):
 
 				# end color ...
-
 				stdout.write('\033[0m')
 
 				# exit from animate function method 2 , if runtime ended ...
-
 				if (not thread.isAlive()) or (finished):
 
 					# show command line cursor ...
-
 					show()
 				
 					# delete line and close animate function ...
-
 					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 				
 				# add star to 3 stars from left varable ...
-
 				reverse = (half_command_line_size_method_1-1)-space
 
 				# delete line ...
-
 				stdout.flush() ; stdout.write('\b \b'*int(resize)) ; zzz(speed) ; stdout.write(' '*command_line_size_method_1+'\r')
 
 				# show loading , |     g yrb     |
-
 				stdout.write(' '*space+star.GREEN+' '*reverse+star.YELLOW+star.RED+star.BLUE)
 
 			# show loading ...
-
 			for space in range(half_command_line_size_method_1):
 				
 				# exit from animate function method 2 , if runtime ended ...
-
 				if (not thread.isAlive()) or (finished):
 
 					# show command line cursor ...
-
 					show()
 				
 					# delete line and close animate function ...
-
 					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*command_line_size_method_1+'\033[0m\r') ; return
 
 					# end color ...
-
 					stdout.write('\033[0m')
 
 				
 				# delete line ...
-
 				stdout.flush() ; stdout.write('\b \b'*int(resize)) ; zzz(speed) ; stdout.write(' '*command_line_size_method_1+'\r')
 
 				# show loading , |     gyr b     |
-
 				stdout.write(' '*half_command_line_size_method_1+star.GREEN+star.YELLOW+star.RED+' '*space+star.BLUE)
 
 			# show loading ...
-
 			for space in range(half_command_line_size_method_1):
 
 				# exit from animate function method 2 , if runtime ended ...
-
 				if (not thread.isAlive()) or (finished):
-
+					
 					# show command line cursor ...
-
 					show()
 				
 					# delete line and close animate function ...
-
 					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*command_line_size_method_1+'\033[0m\r') ; return
 
 					# end color ...
-
 					stdout.write('\033[0m')
 
 				# add star to 3 stars from left varable
-
 				reverse = (half_command_line_size_method_1-1)-space
 
 				# delete line ...
-
 				stdout.flush() ; stdout.write('\b \b'*int(resize)) ; zzz(speed) ; stdout.write(' '*command_line_size_method_1+'\r')
 
 				# show loading , |     b gyr     |
-
 				stdout.write(' '*space+star.BLUE+' '*reverse+star.GREEN+star.YELLOW+star.RED)
 
 	# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	# animate method 2 function ...
-
 	def animate_method_2(speed):
 		
 		# hide command line cursor ...
-
 		hide()
 		
 		# infinite repetition until forced exit ...
-
 		while True:
 
 			# move stars from left to right
-
 			for space in range(command_line_size_method_2):
 
 				# end color ...
-
 				stdout.write('\033[0m')
 
 				# exit from animate function method 2 , if runtime ended ...
-
 				if (not thread.isAlive()) or (finished):
 
 					# show command line cursor ...
-
 					show()
 				
 					# delete line and close animate function ...
-
 					stdout.write('\r\033[D \033[D'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 
 				# stars variable ...
-
 				stars = ' '*space+"***"
 
 				# set stars random color ...
-
 				colors = ['\x1b[34m', '\x1b[36m', '\x1b[32m', '\x1b[90m',
 							 '\x1b[94m', '\x1b[96m', '\x1b[92m', '\x1b[95m',
 							  '\x1b[91m','\x1b[97m', '\x1b[93m', '\x1b[35m',
 							   '\x1b[31m', '\x1b[39m','\x1b[37m', '\x1b[33m']
 
 				# delete line ...
-
 				stdout.flush() ; stdout.write('\033[D \033[D'*int(resize)) ; zzz(speed); stdout.write(' '*int(resize)+'\r')
 
 				# show stars random color ...
-
 				stdout.write(''.join([choice(colors) + char for char in stars]))
 					
 			# move stars from right to left
-
 			for space in range(command_line_size_method_2):
 
 				# end color ...
-
 				stdout.write('\033[0m')
 
 				# exit from animate function method 2 , if runtime ended ...
-
 				if (not thread.isAlive()) or (finished):
-
+					
 					# show command line cursor ...
-
 					show()
 				
 					# delete line and close animate function ...
-
 					stdout.write('\r\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\r') ; return
 
 				# stars variable ...
-
 				stars = ' '*(command_line_size_method_2-space)+"***"
 
 				# set stars random color ...
-
 				colors = ['\x1b[34m', '\x1b[36m', '\x1b[32m', '\x1b[90m',
 							 '\x1b[94m', '\x1b[96m', '\x1b[92m', '\x1b[95m',
 							  '\x1b[91m','\x1b[97m', '\x1b[93m', '\x1b[35m',
 							   '\x1b[31m', '\x1b[39m','\x1b[37m', '\x1b[33m']
 
 				# delete line ...
-
 				stdout.flush() ; stdout.write('\b \b'*int(resize)) ; zzz(speed) ; stdout.write(' '*int(resize)+'\r')
 
 				# show stars random color ...
-
 				stdout.write(''.join([choice(colors) + char for char in stars]))
 
 	# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	# create loading by sleep ...
-
 	if sleep is not None:
 
 		# if type sleep is not int or float , break ...
-
 		if (type(sleep) is int) or (type(sleep) is float):
 
 			# animate method function selection ...
-
 			if method == 1:
 
 				# show animate function method 1 ...
-
 				thread = Thread(target = animate_method_1 , args = [speed])
 				thread.start()
 
 				# if sleep time ended break animate function ...
-
 				zzz(sleep)
 
 				# delete line ...
-
 				stdout.write('\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\033[0m\r')
 
 				# if finished is True breaked animate method 1 function ...
-
 				finished = True
 
 			elif method == 2:
 
 				# show animate function method 2 ...
-
 				thread = Thread(target = animate_method_2 , args = [speed])
 
 				# start thread ...
-				
 				thread.start()
 
 				# if sleep time ended break animate function ...
-
 				zzz(sleep)
 
 				# delete line ...
-				
 				stdout.write('\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\033[0m\r')
 
 				# if finished is True breaked animate method 2 function ...
-
 				finished = True
-
-		# if type sleep is not int or float show error ...
 
 	# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -599,15 +487,20 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 
 		def redirect(f):
 			def wrapper(*args, **kwargs):
+				default_stdout = sys.stdout
 				if ostype().upper() == 'LINUX':
 					sys.stdout = open('/dev/null', 'w')
+
 				elif ostype().upper() == 'WINDOWS':
-					sys.stdout = open('NUL', 'w')
+					sys.stdout = open('file', 'w')
 				try:
 					return f(*args, **kwargs)
 				except TypeError:
 					error('content of the \'argument\' argument does not match the arguments for \'function\' ...')
 					return
+				finally:
+				    sys.stdout.close()
+				    sys.stdout = default_stdout
 
 			return wrapper
 
