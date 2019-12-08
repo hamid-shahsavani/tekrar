@@ -129,12 +129,13 @@
 
      output = True
      ```
+     
    + #### save function return value
-    ```python
-    # call tekrar.loading function in a variable ...
-    
-    save_return_value = tekrar.loading(function = func, argument = ['hi'], output = True, speed = 5, method = 2)
-    ```
+      ```python
+      # call tekrar.loading function in a variable ...
+
+      save_return_value = tekrar.loading(function = func, argument = ['hi'], output = True, speed = 5, method = 2)
+      ```
    
 ---
 ## *copyright*
