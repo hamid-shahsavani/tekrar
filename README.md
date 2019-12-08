@@ -16,7 +16,7 @@
 ---
 ## *what is <ins>tekrar</ins>*
 #### create loading animation in python cli project ...<br />
-##### Generally you can use tekrar in two methods ...
++ ##### Generally you can use tekrar in two methods ...
   + ##### sleep<br />
     maybe a unique example similar to time.sleep ...<br />
     for a few seconds, the loading animation is displayed ...
@@ -51,7 +51,9 @@
 
 ---
 ## *example*
+  
   + #### *function*
+  
     + [1 : curl download file](https://raw.githubusercontent.com/sys113/tekrar/master/example/function_example_one.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, argument, speed, output```
     + [2 : write numbers 1 to 333333 in a file](https://raw.githubusercontent.com/sys113/tekrar/master/function_example_two.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, speed, method, output and save function return value ...```
   
@@ -91,7 +93,7 @@
   + #### *sleep*
     ```python
     
-      # Show loading for 8 second ...
+      # pause the aplication and display the loading animation for 8 seconds ...
       # maybe a unique example similar to time.sleep ...
       
       # argument 'sleep' must be a int type ...
