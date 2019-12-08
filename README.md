@@ -20,7 +20,7 @@
 
   + ##### sleep<br />
     ```
-    maybe a unique example similar to time.sleep ...<br />
+    maybe a unique example similar to time.sleep ...
     pause the python cli project and display the loading animation for a few seconds ...
     ```
     
