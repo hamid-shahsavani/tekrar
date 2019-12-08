@@ -1,0 +1,33 @@
++ 0.1.0
+  
+    - create LICENSE
+    
+      * MIT license
+    
+    - create CHANGELOG file
+    
+    - create TODO file
+    
+    - create REQUIREMENTS file
+    
+    - create setup.py
+      * add tekrar to pypi ...
+    
+    - 'function' argument
+      * show loading if 'x' function running ...
+    
+    - 'sleep' argument
+      * show loading animation for a few seconds ...
+      
+    - 'output' argument
+      * show function output ...
+    
+    - 'argument' argument
+      * use this method if 'function' has 'argument' ...
+      
+    - 'method' argument
+      * set loading animation method ...
+      
+    - save function return value
+      * example = x = tekrar.loading(function = func) , print(x)
+      
