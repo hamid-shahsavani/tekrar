@@ -17,11 +17,11 @@
 ## *what is <ins>tekrar</ins>*
 #### create loading animation in python cli project ...<br />
 ##### Generally you can use tekrar in two methods ...
-  + ###### sleep<br />
-    maybe a unique example similar to time.sleep ...
+  + ##### sleep<br />
+    maybe a unique example similar to time.sleep ...<br />
     for a few seconds, the loading animation is displayed ...
     
-  + ###### function<br />
+  + ##### function<br />
     show loading animation will be displayed until the function process is completed ...
 
 
