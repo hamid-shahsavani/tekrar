@@ -42,9 +42,9 @@
 
 ---
 ## *example*
-  + function
-    + [1 : curl download file](https://raw.githubusercontent.com/sys113/tekrar/master/example/1_curl_download_file.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, argument, speed, output```
-    + [2 : write numbers 1 to 333333 in a file](https://raw.githubusercontent.com/sys113/tekrar/master/example/2_write_numbers_1_to_333333_in_a_file.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, speed, method, output and save function return value ...```
+  + #### *function*
+    + [1 : curl download file](https://raw.githubusercontent.com/sys113/tekrar/master/example/1_curl_download_file.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, argument, speed, output```
+    + [2 : write numbers 1 to 333333 in a file](https://raw.githubusercontent.com/sys113/tekrar/master/example/2_write_numbers_1_to_333333_in_a_file.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, speed, method, output and save function return value ...```
   
 ---
 ## *description*
