@@ -15,7 +15,7 @@
 
 ---
 ## *what is <ins>tekrar</ins>*
-### *create loading animation in python cli project ...*<br />
+#### *create loading animation in python cli project ...*<br />
 + ##### Generally you can use tekrar in two methods ...
 
   + ##### sleep<br />
