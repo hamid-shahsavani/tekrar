@@ -15,7 +15,16 @@
 
 ---
 ## *what is <ins>tekrar</ins>*
-*create loading animation in python cli project ...<br />*
+#### create loading animation in python cli project ...<br />
+##### Generally you can use tekrar in two methods ...
+  + ###### sleep<br />
+    maybe a unique example similar to time.sleep ...
+    for a few seconds, the loading animation is displayed ...
+    
+  + ###### function<br />
+    show loading animation will be displayed until the function process is completed ...
+
+
 
 ---
 ## *installation*
@@ -43,8 +52,8 @@
 ---
 ## *example*
   + #### *function*
-    + [1 : curl download file](https://raw.githubusercontent.com/sys113/tekrar/master/example/1_curl_download_file.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, argument, speed, output```
-    + [2 : write numbers 1 to 333333 in a file](https://raw.githubusercontent.com/sys113/tekrar/master/example/2_write_numbers_1_to_333333_in_a_file.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, speed, method, output and save function return value ...```
+    + [1 : curl download file](https://raw.githubusercontent.com/sys113/tekrar/master/example/function_example_one.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, argument, speed, output```
+    + [2 : write numbers 1 to 333333 in a file](https://raw.githubusercontent.com/sys113/tekrar/master/function_example_two.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, speed, method, output and save function return value ...```
   
 ---
 ## *description*
@@ -83,7 +92,7 @@
     ```python
     
       # Show loading for 8 second ...
-      # maybe an alternative to time.sleep function or something like that ...
+      # maybe a unique example similar to time.sleep ...
       
       # argument 'sleep' must be a int type ...
       # cannot use simultaneously 'sleep' and 'function' argument ...
