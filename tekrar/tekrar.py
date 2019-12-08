@@ -38,77 +38,165 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 
 	# --------------------------------------------------------------------------- if statements -------------------------------------------------------------------
 
-	# if type 'argument' is not list show error ...
-	if (argument is not None) and (type(argument) is not list):
-		error('argument \'argument\' must be a list type ...')
-		return
+	# all argument is None ...
+	if sleep is None:
+		if function is None:
+			if speed is None:
+				if method is None:
+					if argument is None:
+						if output is None:
+							error('please use arguments ...')
 
-	# prerequisites for using argument ...
-	if ((sleep is None) and (function is None)) and (speed is not None):
-		error('need \'sleep\' or \'function\' argument to use the \'speed\' argument ...')
-		return
-	elif ((sleep is None) and (function is None)) and (method is not None):
-		error('need \'sleep\' or \'function\' argument to use the \'method\' argument ...')
-		return
-	elif ((sleep is None) and (function is None)):
-	# if type sleep is not int or float show error ...
-		error('argument \'argument\' must be a list type ...')
-		return
-	elif (function is None) and (argument is not None):
-		error('need \'function\' argument to use the \'method\' argument ...')
-		return
-	elif (function is None) and (output is not None):
-		error('need \'function\' argument to use the \'output\' argument ...')
-		return
+	# function has value ...
+	if function is not None:
 
-	# if use 'sleep' argument , cannot use 'argument' and 'output' and 'output' arguments ...
-	if (sleep is not None) and (function is not None):
-		error('if use \'sleep\' argument , cannot use \'function\' argument and vice versa ...')
-		return
+		# set method , default 1 ...
+		if method is None:
+			method = 1
+		elif type(method) is not int:
+			error('\'method\' argument must be number range of 1 to 2 ...')
+			return
+		elif method == 1:
+			method = 1
+		elif method == 2:
+			method = 2
+		elif method > 2:
+			error('\'method\' argument must be number range of 1 to 2 ...')
+			return
 
-	# set speed for animates function , default is 5 ...
-	if speed is None:
-		speed = 0.040
-	elif type(speed) is not int:
-		error('speed argument must be number range of 1 to 10 ...')
-		return
-	elif speed == 1:
-		speed = 0.020
-	elif speed == 2:
-		speed = 0.030
-	elif speed == 3:
-		speed = 0.040
-	elif speed == 4:
-		speed = 0.050
-	elif speed == 5:
-		speed = 0.060
-	elif speed == 6:
-		speed = 0.070
-	elif speed == 7:
-		speed = 0.080
-	elif speed == 8:
-		speed = 0.090
-	elif speed == 9:
-		speed = 0.200
-	elif speed == 10:
-		speed = 0.350
-	else:
-		error('\'speed\' argument must be number range of 1 to 10 ...')
-		return
+		# set value for speed ...
+		if speed is None:
+			speed = 0.040
+		elif speed is not None:
+			if type(speed) is not int:
+				error('\'speed\' argument must be number range of 1 to 10 ...')
+				return
+			elif speed == 1:
+				speed = 0.020
+			elif speed == 2:
+				speed = 0.030
+			elif speed == 3:
+				speed = 0.040
+			elif speed == 4:
+				speed = 0.050
+			elif speed == 5:
+				speed = 0.060
+			elif speed == 6:
+				speed = 0.070
+			elif speed == 7:
+				speed = 0.080
+			elif speed == 8:
+				speed = 0.090
+			elif speed == 9:
+				speed = 0.200
+			elif speed == 10:
+				speed = 0.350
+			elif speed > 10:
+				error('\'speed\' argument must be number range of 1 to 10 ...')
+				return
 
-	# set method for animates function , default 1 ...
-	if method is None:
-		method = 1
-	elif type(method) is not int:
-		error('\'method\' argument must be number range of 1 to 2 ...')
-		return
-	elif method == 1:
-		method = 1
-	elif method == 2:
-		method = 2
-	else:
-		error('\'method\' argument must be number range of 1 to 2 ...')
-		return
+		# cannot use simultaneously 'sleep' and 'function' argument ...
+		if sleep is not None:
+			error('if use \'sleep\' argument , cannot use \'function\' argument and vice versa ...')
+			return
+
+		# argument has value ...
+		if argument is not None: 
+			if type(argument) is not list:
+				error('argument \'argument\' must be a list type ...')
+				return
+
+		# output no value ...
+		if output is None:
+			output = True
+
+		# output has value ...
+		elif output is not None:
+			if type(output) is not bool:
+				error('argument \'output\' must be boolean type ...')
+				return
+
+	# function no value ...
+	elif function is None:
+
+		# sleep no value ...
+		if sleep is None: 
+
+			# sleep has value ...
+			if speed is not None:
+				error('need \'sleep\' or \'function\' argument to use the \'speed\' argument ...')
+				return
+
+			# method has value ...
+			elif method is not None:
+				error('need \'sleep\' or \'function\' argument to use the \'method\' argument ...')
+				return
+
+		# argument has value ...
+		if argument is not None:
+			error('need \'function\' argument to use the \'argument\' argument ...')
+			return
+
+		# output has value ...
+		if output is not None:
+			error('need \'function\' argument to use the \'output\' argument ...')
+			return
+
+		# output has value ...
+		if output is not None:
+			error('need \'function\' argument to use the \'output\' argument ...')
+			return
+
+	# sleep has value ...
+	if sleep is not None:
+		if type(sleep) is not int:
+			error('argument \'sleep\' must be a int type ...')
+			return
+
+		# set method , default 1 ...
+		if method is None:
+			method = 1
+		elif type(method) is not int:
+			error('\'method\' argument must be number range of 1 to 2 ...')
+			return
+		elif method == 1:
+			method = 1
+		elif method == 2:
+			method = 2
+		elif method > 2:
+			error('\'method\' argument must be number range of 1 to 2 ...')
+			return
+
+		# set value for speed ...
+		if speed is None:
+			speed = 0.040
+		elif speed is not None:
+			if type(speed) is not int:
+				error('\'speed\' argument must be number range of 1 to 10 ...')
+				return
+			elif speed == 1:
+				speed = 0.020
+			elif speed == 2:
+				speed = 0.030
+			elif speed == 3:
+				speed = 0.040
+			elif speed == 4:
+				speed = 0.050
+			elif speed == 5:
+				speed = 0.060
+			elif speed == 6:
+				speed = 0.070
+			elif speed == 7:
+				speed = 0.080
+			elif speed == 8:
+				speed = 0.090
+			elif speed == 9:
+				speed = 0.200
+			elif speed == 10:
+				speed = 0.350
+			elif speed > 10:
+				error('\'speed\' argument must be number range of 1 to 10 ...')
+				return
 
 	# -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -147,10 +235,10 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 	# command prompet size method 2 ...
 	command_line_size_method_2 = int(resize)-4
 
-	# b is blue , g is green , r is red , y is yellow in animate method 1 comment ...
-
 	# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+	# b is blue , g is green , r is red , y is yellow in animate method 1 comment ...
+	
 	# animate method 1 function ...
 	def animate_method_1(speed):
 		
@@ -417,64 +505,46 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 	# create loading by sleep ...
 	if sleep is not None:
 
-		# if type sleep is not int or float , break ...
-		if (type(sleep) is int) or (type(sleep) is float):
+		# animate method function selection ...
+		if method == 1:
 
-			# animate method function selection ...
-			if method == 1:
+			# show animate function method 1 ...
+			thread = Thread(target = animate_method_1 , args = [speed])
+			thread.start()
 
-				# show animate function method 1 ...
-				thread = Thread(target = animate_method_1 , args = [speed])
-				thread.start()
+			# if sleep time ended break animate function ...
+			zzz(sleep)
 
-				# if sleep time ended break animate function ...
-				zzz(sleep)
+			# delete line ...
+			stdout.write('\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\033[0m\r')
 
-				# delete line ...
-				stdout.write('\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\033[0m\r')
+			# if finished is True breaked animate method 1 function ...
+			finished = True
 
-				# if finished is True breaked animate method 1 function ...
-				finished = True
+		elif method == 2:
 
-			elif method == 2:
+			# show animate function method 2 ...
+			thread = Thread(target = animate_method_2 , args = [speed])
 
-				# show animate function method 2 ...
-				thread = Thread(target = animate_method_2 , args = [speed])
+			# start thread ...
+			thread.start()
 
-				# start thread ...
-				thread.start()
+			# if sleep time ended break animate function ...
+			zzz(sleep)
 
-				# if sleep time ended break animate function ...
-				zzz(sleep)
+			# delete line ...
+			stdout.write('\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\033[0m\r')
 
-				# delete line ...
-				stdout.write('\b \b'*int(resize)) ; stdout.write(' '*int(resize)+'\033[0m\r')
-
-				# if finished is True breaked animate method 2 function ...
-				finished = True
+			# if finished is True breaked animate method 2 function ...
+			finished = True
 
 	# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	# create loading by function ...
-
 	elif function is not None:
 
-		# set show function output , default is True ...
-
-		if output is None:
-			output = True
-		elif output is True:
-			output = True
-		elif output is False:
-			output = False
-		elif type(output) is not bool:
-			error('argument \'output\' must be boolean type ...')
-			return
-
 		# check function return value ...
-
 		return_value = Queue()
-
 		def storeInQueue(function):
 			def returned(*args):
 					try:
@@ -484,7 +554,6 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 			return returned
 
 		# redirect function stdout ...
-
 		def redirect(f):
 			def wrapper(*args, **kwargs):
 				default_stdout = sys.stdout
@@ -504,65 +573,52 @@ def loading(sleep = None , function = None , speed = None , method = None , argu
 
 			return wrapper
 
-		# if output is False , redirect function output ...
-
+		# output is False , redirect function output ...
 		if output is False:
 
 			# if is arguments ...
-
 			if argument is not None:
 
 				# if type 'argument' is not list show error ...
-
 				if type(argument) is not list:
 					error('argument \'argument\' must be a list type ...')
 					return
 
 				# create thread ...
-
 				thread = Thread(target = storeInQueue(redirect(function)) , args = argument)
 
 			# if is not arguments ...
-
 			elif argument is None:
 
 				# create thread ...
-
 				thread = Thread(target = storeInQueue(redirect(function)))
 
+		# output is True , can't  redirect function output ...
 		elif output is True:
 
-			# if is arguments ...
-
+			# if is argument ...
 			if argument is not None:
 
 				# create thread ...
-
 				thread = Thread(target = storeInQueue(function) , args = argument)
 
 			# if is not arguments ...
-
 			elif argument is None:
 
 				# create thread ...
-
 				thread = Thread(target = storeInQueue(function))
 
 		# start thread and show loading ...
-
 		thread.start()
 
 		# if function is running ...
-
 		while thread.isAlive():
 
 			# selection method to show animate ...
-
 			if method == 1:
 				animate_method_1(speed)
 			elif method == 2:
 				animate_method_2(speed)
 
 		# return function value ...
-
 		return return_value.get()
