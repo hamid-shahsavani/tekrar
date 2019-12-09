@@ -40,13 +40,9 @@ def loading(sleep=None, function=None, speed=None, method=None, argument=None, o
     # ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # all argument is None ...
-    if sleep is None:
-        if function is None:
-            if speed is None:
-                if method is None:
-                    if argument is None:
-                        if output is None:
-                            error('please use arguments ...')
+     if(check_none_value is not None for check_none_value in [sleep, function, speed, method, argument, output]):
+        error('please use arguments ...')
+        return
 
     # function has value ...
     if function is not None:
