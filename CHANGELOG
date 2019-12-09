@@ -31,3 +31,7 @@
     - save function return value
       * example = x = tekrar.loading(function = func) , print(x)
       
++ 0.1.1
+
+    - fix 'method' argument bug ...
+      
