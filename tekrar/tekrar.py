@@ -12,8 +12,6 @@ from random import choice
 from queue import Queue
 
 # loading function ...
-
-
 def loading(sleep=None, function=None, speed=None, method=None, argument=None, output=None):
 
     # show error function ...
@@ -97,7 +95,7 @@ def loading(sleep=None, function=None, speed=None, method=None, argument=None, o
             elif speed > 10:
                 error('\'speed\' argument must be number range of 1 to 10 ...')
                 return
-
+            
         # cannot use simultaneously 'sleep' and 'function' argument ...
         if sleep is not None:
             error(
