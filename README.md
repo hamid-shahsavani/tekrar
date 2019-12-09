@@ -48,11 +48,11 @@
 
       # linux
       
-      sudo python3 -m pip install https://github.com/sys113/tekrar/archive/0.1.0.zip
+      sudo python3 -m pip install https://github.com/sys113/tekrar/archive/0.1.1.zip
       
       # windows
       
-      py -m pip install https://github.com/sys113/tekrar/archive/0.1.0.zip
+      py -m pip install https://github.com/sys113/tekrar/archive/0.1.1.zip
 
 ---
 ## *example*
