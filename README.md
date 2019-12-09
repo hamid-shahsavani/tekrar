@@ -60,7 +60,7 @@
   + #### *function*
   
     + [1 : curl download file](https://raw.githubusercontent.com/sys113/tekrar/master/example/function_example_one.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, argument, speed, output```
-    + [2 : write numbers 1 to 333333 in a file](https://raw.githubusercontent.com/sys113/tekrar/master/example/function_example_two.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, speed, method, output and save function return value ...```
+    + [2 : write numbers 1 to 333333 in a file](https://raw.githubusercontent.com/sys113/tekrar/master/example/function_example_two.gif)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```arguments used : function, speed, method, output and save function return value```
     
    + #### *sleep*
    
