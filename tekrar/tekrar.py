@@ -40,7 +40,10 @@ def loading(sleep=None, function=None, speed=None, method=None, argument=None, o
     # ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # all argument is None ...
-     if(check_none_value is not None for check_none_value in [sleep, function, speed, method, argument, output]):
+
+    list_argument = [sleep, function, speed, method, argument, output]
+
+    if list_argument == [None, None, None, None, None, None]:
         error('please use arguments ...')
         return
 
@@ -51,6 +54,9 @@ def loading(sleep=None, function=None, speed=None, method=None, argument=None, o
         if method is None:
             method = 1
         elif type(method) is not int:
+            error('\'method\' argument must be number range of 1 to 2 ...')
+            return
+        elif method == 0:
             error('\'method\' argument must be number range of 1 to 2 ...')
             return
         elif method > 2:
@@ -155,6 +161,8 @@ def loading(sleep=None, function=None, speed=None, method=None, argument=None, o
         elif type(method) is not int:
             error('\'method\' argument must be number range of 1 to 2 ...')
             return
+        elif method == 0:
+            error('\'method\' argument must be number range of 1 to 2 ...')
         elif method > 2:
             error('\'method\' argument must be number range of 1 to 2 ...')
             return
