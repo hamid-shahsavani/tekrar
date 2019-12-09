@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
   name = "tekrar",
-  version = "0.1.0",
+  version = "0.1.1",
   description = "create loading animation in python cli project ...",
   long_description=long_description,
   long_description_content_type="text/markdown",
