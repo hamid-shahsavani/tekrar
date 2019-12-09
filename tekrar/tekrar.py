@@ -57,10 +57,6 @@ def loading(sleep=None, function=None, speed=None, method=None, argument=None, o
         elif type(method) is not int:
             error('\'method\' argument must be number range of 1 to 2 ...')
             return
-        elif method == 1:
-            method = 1
-        elif method == 2:
-            method = 2
         elif method > 2:
             error('\'method\' argument must be number range of 1 to 2 ...')
             return
@@ -163,10 +159,6 @@ def loading(sleep=None, function=None, speed=None, method=None, argument=None, o
         elif type(method) is not int:
             error('\'method\' argument must be number range of 1 to 2 ...')
             return
-        elif method == 1:
-            method = 1
-        elif method == 2:
-            method = 2
         elif method > 2:
             error('\'method\' argument must be number range of 1 to 2 ...')
             return
